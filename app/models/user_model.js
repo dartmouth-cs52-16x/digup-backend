@@ -5,6 +5,9 @@ import bcrypt from 'bcrypt-nodejs';
 const UserSchema = new Schema({
   email: { type: String, unique: true, lowercase: true },
   password: String,
+  username: String,
+  pictureURL: String,
+  key: String,
 });
 
 UserSchema.set('toJSON', {
